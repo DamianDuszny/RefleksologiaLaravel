@@ -43,4 +43,8 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasMany('App\Post');
     }
+    public function role()
+    {
+        return $this->hasOne("App/Role");
+    }
 }
