@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', 'HomeController@index');
 Route::get('category/{slug}', 'CategoryController@index');
 Route::get('tag/{slug}', 'TagController@index');
-Route::get('post/{slug}', 'PostController@index')->middleware('guest');
+Route::get('post/{slug}', 'PostController@index');
 Route::get('kontakt', 'ContactController@index');
 Route::get('user/{id}', 'AccountController@index');
 Route::get('/logout', 'LogoutController');

@@ -36,9 +36,12 @@
                         <a class="nav-link" href="/login">Login</a>
                     </li>
                 @endif
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
+
+                    @can("isAdmin")
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/admin">Admin</a>
+                        </li>
+                    @endcan
                     @auth
                 <li class="nav-item active">
                     <a class="nav-link" href="/user/{{auth()->user()->id}}">Konto</a>

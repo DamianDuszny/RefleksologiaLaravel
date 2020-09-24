@@ -9,7 +9,7 @@ class AccountController extends Controller
 {
     public function index(Request $request)
     {
-        $data = user::query()->where("id", auth()->user()->id)->get(["name", "email", "created_at"])->first();
+        $data = user::query()->where("id", auth()->user()->id)->get(["name", "email", "created_at", "role_id"])->first();
         return view("user",
             ['UserData' => $data]
         );

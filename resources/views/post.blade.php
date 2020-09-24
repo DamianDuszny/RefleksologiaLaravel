@@ -33,9 +33,9 @@
 
             <!-- Comments -->
             <!-- Edit button if admin is logged -->
-        @if(Auth::user()->id==1)
-            works
-            @endif
+        @can('isAdmin')
+            <a href="/admin/blog-posts/{{$post->id}}/edit">Edytuj</a>
+            @endcan
         </div>
 
 
